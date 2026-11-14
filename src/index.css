@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@keyframes header-autosave-blink {
+  0%,
+  100% {
+    background-color: #000000;
+  }
+  15%,
+  45%,
+  75% {
+    background-color: #16a34a;
+  }
+  30%,
+  60%,
+  90% {
+    background-color: #064e3b;
+  }
+}
+
+.header-autosave-blink {
+  animation: header-autosave-blink 3.6s ease-in-out;
+}
+
+@keyframes copy-btn-blink {
+  0%,
+  100% {
+    background-color: #f1f5f9;
+    color: #0f172a;
+  }
+  15%,
+  45%,
+  75% {
+    background-color: #16a34a;
+    color: #ffffff;
+  }
+  30%,
+  60%,
+  90% {
+    background-color: #15803d;
+    color: #ffffff;
+  }
+}
+
+.copy-btn-blink {
+  animation: copy-btn-blink 1.4s ease-in-out;
+}
+
+@keyframes btn-scroll-line {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.btn-scroll-track {
+  display: inline-flex;
+  white-space: nowrap;
+  width: max-content;
+  animation: btn-scroll-line 7s linear infinite;
+}
+
+button:hover .btn-scroll-track {
+  animation-play-state: paused;
+}
+
+.header-scroll-box {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.header-scroll-track {
+  display: inline-flex;
+  white-space: nowrap;
+  width: max-content;
+  animation: btn-scroll-line 18s linear infinite;
+}
+
+.header-scroll-box:hover .header-scroll-track {
+  animation-play-state: paused;
+}
+
+.snippet-card-glow {
+  transition: box-shadow 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.snippet-card-glow:hover,
+.snippet-card-glow:focus-within {
+  border-color: #3b82f6 !important;
+  background-color: #f8fbff !important;
+  box-shadow:
+    0 0 0 2px rgba(59, 130, 246, 0.45),
+    0 0 18px 4px rgba(56, 189, 248, 0.48);
+}
+
+.snippet-card-glow-active {
+  border-color: #2563eb !important;
+  background-color: #eff6ff !important;
+  box-shadow:
+    0 0 0 2px #2563eb,
+    0 0 22px 6px rgba(37, 99, 235, 0.56),
+    0 0 8px 2px rgba(14, 165, 233, 0.45);
+}
